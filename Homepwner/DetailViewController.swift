@@ -47,14 +47,13 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         //Get picked image from info dictionary
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let imagee = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         //Store the image in the ImageStore for the item's key
-        print(item.itemKey)
-        imageStore.setImage(image, forKey: item.itemKey)
+        imageStore.setImage(imagee, forKey: item.itemKey)
         
         //Put that image on the screen in the image view 
-        imageView.image = image
+        imageView.image = imagee
         
         //Take image picker off the screen
         //you must call this dismiss method

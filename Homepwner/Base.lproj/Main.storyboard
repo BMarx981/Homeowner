@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cq0-lc-WMe" id="f9M-rx-b9D">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHb-Hd-cY4">
@@ -172,9 +172,8 @@
                                     <constraint firstItem="SZt-l2-DdP" firstAttribute="leading" secondItem="xr0-1A-cQT" secondAttribute="leading" id="qhh-Vf-aJa"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QCn-CW-TaO">
-                                <rect key="frame" x="16" y="269" width="343" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QCn-CW-TaO">
+                                <rect key="frame" x="16" y="284" width="343" height="339"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hsd-Et-vwr">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -197,8 +196,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="0cY-Pb-891" secondAttribute="trailing" id="F0R-DI-3sR"/>
                             <constraint firstItem="0cY-Pb-891" firstAttribute="top" secondItem="uYs-hN-kqr" secondAttribute="bottom" constant="8" id="KjB-7K-XVm"/>
                             <constraint firstAttribute="trailing" secondItem="Hsd-Et-vwr" secondAttribute="trailing" id="Klr-tt-Xhu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QCn-CW-TaO" secondAttribute="trailing" id="Lf5-kH-emo"/>
+                            <constraint firstItem="QCn-CW-TaO" firstAttribute="top" secondItem="0cY-Pb-891" secondAttribute="bottom" constant="77" id="Z7b-Gk-uFM"/>
                             <constraint firstItem="Hsd-Et-vwr" firstAttribute="leading" secondItem="Vvr-5U-kA6" secondAttribute="leading" id="c6B-zT-eP3"/>
                             <constraint firstItem="6AE-r0-ySj" firstAttribute="top" secondItem="Hsd-Et-vwr" secondAttribute="bottom" id="dfw-QS-UCV"/>
+                            <constraint firstItem="QCn-CW-TaO" firstAttribute="bottom" secondItem="Hsd-Et-vwr" secondAttribute="top" id="hBZ-Ko-XNY"/>
+                            <constraint firstItem="QCn-CW-TaO" firstAttribute="leading" secondItem="0cY-Pb-891" secondAttribute="leading" id="kjZ-NF-rbd"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="h7Y-a0-hmh" appends="YES" id="N3u-QV-3uv"/>
@@ -206,6 +209,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="nsh-yH-A4M" id="53E-Th-gh0"/>
+                        <outlet property="imageView" destination="QCn-CW-TaO" id="kJy-FM-dhH"/>
                         <outlet property="nameField" destination="hcX-Gr-jGT" id="165-bM-sP8"/>
                         <outlet property="serialNumberField" destination="SZt-l2-DdP" id="HD5-Az-sCm"/>
                         <outlet property="valueField" destination="xr0-1A-cQT" id="9mI-sX-NHi"/>
