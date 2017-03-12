@@ -25,6 +25,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     //This is an instance of ImageStore to allow detailViewController to
     //communicate with the image store object
     var imageStore: ImageStore!
+    var imagePicker: UIImagePickerController!
     
     //This will use an UIImagePickerController
     @IBAction func takePicture(_ sender: UIBarButtonItem) {
@@ -40,6 +41,26 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         //DetailViewController is the image picker's delegate
         //Self refers to the class we are in
         imagePicker.delegate = self
+        
+        //Place image picker on the screen
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func editImage(_ sender: UIButton) {
+        //Allow the image to be edited by the UIImageViewPicker
+        let imagePicker = UIImagePickerController()
+        
+        //If the device has a camera, take a picture;
+        //Otherwise, just pick from photo library
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+        } else {
+            imagePicker.sourceType = .photoLibrary
+        }
+        //DetailViewController is the image picker's delegate
+        //Self refers to the class we are in
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
         
         //Place image picker on the screen
         present(imagePicker, animated: true, completion: nil)

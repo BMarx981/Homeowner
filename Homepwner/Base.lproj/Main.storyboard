@@ -173,8 +173,12 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QCn-CW-TaO">
-                                <rect key="frame" x="16" y="284" width="343" height="339"/>
+                                <rect key="frame" x="16" y="284" width="343" height="289"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dA-yY-VPS">
+                                <rect key="frame" x="172" y="593" width="30" height="30"/>
+                                <state key="normal" title="Edit"/>
+                            </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hsd-Et-vwr">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <constraints>
@@ -197,11 +201,13 @@
                             <constraint firstItem="0cY-Pb-891" firstAttribute="top" secondItem="uYs-hN-kqr" secondAttribute="bottom" constant="8" id="KjB-7K-XVm"/>
                             <constraint firstAttribute="trailing" secondItem="Hsd-Et-vwr" secondAttribute="trailing" id="Klr-tt-Xhu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QCn-CW-TaO" secondAttribute="trailing" id="Lf5-kH-emo"/>
+                            <constraint firstItem="2dA-yY-VPS" firstAttribute="centerX" secondItem="Vvr-5U-kA6" secondAttribute="centerX" id="Nd1-ah-LW8"/>
                             <constraint firstItem="QCn-CW-TaO" firstAttribute="top" secondItem="0cY-Pb-891" secondAttribute="bottom" constant="77" id="Z7b-Gk-uFM"/>
                             <constraint firstItem="Hsd-Et-vwr" firstAttribute="leading" secondItem="Vvr-5U-kA6" secondAttribute="leading" id="c6B-zT-eP3"/>
                             <constraint firstItem="6AE-r0-ySj" firstAttribute="top" secondItem="Hsd-Et-vwr" secondAttribute="bottom" id="dfw-QS-UCV"/>
-                            <constraint firstItem="QCn-CW-TaO" firstAttribute="bottom" secondItem="Hsd-Et-vwr" secondAttribute="top" id="hBZ-Ko-XNY"/>
+                            <constraint firstItem="QCn-CW-TaO" firstAttribute="bottom" secondItem="Hsd-Et-vwr" secondAttribute="top" constant="-50" id="hBZ-Ko-XNY"/>
                             <constraint firstItem="QCn-CW-TaO" firstAttribute="leading" secondItem="0cY-Pb-891" secondAttribute="leading" id="kjZ-NF-rbd"/>
+                            <constraint firstItem="Hsd-Et-vwr" firstAttribute="top" secondItem="2dA-yY-VPS" secondAttribute="bottom" id="t0i-22-G6u"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="h7Y-a0-hmh" appends="YES" id="N3u-QV-3uv"/>
