@@ -178,6 +178,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dA-yY-VPS">
                                 <rect key="frame" x="172" y="593" width="30" height="30"/>
                                 <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editImage:" destination="0aL-uK-LCK" eventType="touchUpInside" id="4a8-cO-AfR"/>
+                                </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hsd-Et-vwr">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
