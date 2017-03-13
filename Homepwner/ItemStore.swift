@@ -8,6 +8,21 @@ class ItemStore {
     
     var allItems: [Item] = []
     
+    //Constructs a URL file
+    let itemArchiveURL: URL = {
+        //.url method searches the filesystem for a URL that meets the criteria given by the arguments
+        let documentsDirectories = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = documentsDirectories.first!
+            return
+        documentDirectory.appendingPathComponent("items.archive")
+    }()
+    
+    func saveChanges() -> Bool {
+        print("Saving items to: \(itemArchiveURL.path)")
+        return
+        //ArchiverootObject takes care of saving every single Item in allItems to itemArchiveURL
+    NSKeyedArchiver.archiveRootObject(allItems, toFile: itemArchiveURL.path)
+    }
 //    init() {
 //          for _ in 0..<5 {
 //              createItem()

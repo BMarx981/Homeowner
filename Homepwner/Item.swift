@@ -46,6 +46,8 @@ class Item: NSObject, NSCoding {
         }
     }
     
+    //Use this to save info in the cache
+    //this method adheres to the NSCoding protocol
     func encode(with aCoder: NSCoder) {
         aCoder.encode(name, forKey: "name")
         aCoder.encode(dateCreated, forKey: "dateCreated")
@@ -54,6 +56,8 @@ class Item: NSObject, NSCoding {
         aCoder.encode(valueInDollars, forKey: "valueInDollars")
     }
     
+    //This is a required method to adhere to the NSCoder protocol
+    //Each element of this class is decoded during initialization
     required init(coder aDecoder: NSCoder) {
         name = aDecoder.decodeObject(forKey: "name") as! String
         dateCreated = aDecoder.decodeObject(forKey: "dateCreated") as! Date

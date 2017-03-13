@@ -13,7 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         //Creates an ItemStore
-        let itemStore = ItemStore()
+        //To let the itemStore store all of it's contents when the app goes into the background 
+        //This next line gets commented out
+        //let itemStore = ItemStore()
         
         //Creates an ImageStore
         let imageStore = ImageStore()
@@ -38,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        let itemStore = ItemStore()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
