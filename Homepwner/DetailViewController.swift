@@ -45,14 +45,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         //Place image picker on the screen
         present(imagePicker, animated: true, completion: nil)
     }
-    
-    @IBAction func editImage(_ sender: UIButton) {
-        //Allow the image to be edited by the UIImageViewPicker
-        imagePicker.allowsEditing = true
-        imagePicker.delegate = self
-        
-        present(imagePicker, animated: true, completion: nil)
-    }
+
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         //Get picked image from info dictionary
