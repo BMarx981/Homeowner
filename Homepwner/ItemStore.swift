@@ -8,6 +8,13 @@ class ItemStore {
     
     var allItems: [Item] = []
     
+    init() {
+        //
+        if let archivedItems = NSKeyedUnarchiver.unarchiveObject(withFile: itemArchiveURL.path) as? [Item] {
+            allItems = archivedItems
+        }
+    }
+    
     //Constructs a URL file
     let itemArchiveURL: URL = {
         //.url method searches the filesystem for a URL that meets the criteria given by the arguments
